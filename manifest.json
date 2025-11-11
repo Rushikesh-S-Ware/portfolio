@@ -1,0 +1,16 @@
+{
+  "short_name": "RushikeshWare",
+  "name": "Rushikesh Ware | Portfolio",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512 192x192 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0c0513",
+  "background_color": "#ffffff",
+  "description": "Portfolio website of Rushikesh Shivajirao Ware, showcasing projects in Data Analytics, Machine Learning, and Cloud Computing."
+}
