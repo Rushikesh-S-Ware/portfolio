@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.png"; // replace with your actual image
-import Tilt from "react-parallax-tilt";
+import myImg from "../../Assets/about.png"; // or avatar.png if you prefer
 
 function Home2() {
   return (
@@ -13,44 +12,30 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a passionate <b className="purple">Data Analyst & Engineer</b>{" "}
-              who enjoys turning raw data into meaningful insights and building
-              intelligent, scalable solutions.
+              I’m a Data & ML-focused engineer who loves turning ideas into
+              reliable, scalable products. I enjoy building across the stack and
+              shipping things that people actually use.
               <br />
               <br />
-              Skilled in{" "}
-              <i>
-                <b className="purple">
-                  Python, SQL, Airflow, Docker, GCP, AWS, and Power BI
-                </b>
-              </i>
-              — I specialize in designing end-to-end data pipelines, automating
-              workflows, and visualizing patterns that drive decisions.
+              Comfortable with{" "}
+              <b className="purple">Python, SQL, JavaScript, React, Node.js</b>{" "}
+              and cloud tooling.
               <br />
               <br />
-              My recent projects include an{" "}
-              <b className="purple">NLP-based SQL Transformer</b>,{" "}
-              <b className="purple">Forest Analytics pipeline</b> for ClimateGPT,
-              and <b className="purple">KEV risk model</b> for cybersecurity.
-              <br />
-              <br />
-              I’m always eager to explore how{" "}
+              Interests:{" "}
               <b className="purple">
-                data, AI, and cloud systems
-              </b>{" "}
-              can simplify complex problems and create lasting impact.
+                NLP → SQL, analytics engineering, ML systems, dashboards
+              </b>
+              .
               <br />
               <br />
-              Off the screen, I’m a huge{" "}
-              <b className="purple">football (soccer)</b> enthusiast ⚽ — I love
-              teamwork, strategy, and the thrill of the game, both on the field
-              and in data challenges!
+              Recently I’ve been building with{" "}
+              <b className="purple">React</b> / modern tooling and deploying to
+              GH Pages & Hugging Face Spaces.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+            <img src={myImg} className="img-fluid" alt="avatar" />
           </Col>
         </Row>
       </Container>
