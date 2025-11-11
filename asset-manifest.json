@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.6fa4b811.css",
-    "main.js": "/portfolio/static/js/main.8fad4042.js",
-    "static/js/453.ace21015.chunk.js": "/portfolio/static/js/453.ace21015.chunk.js",
+    "main.css": "/portfolio/static/css/main.04b93084.css",
+    "main.js": "/portfolio/static/js/main.5bf5617c.js",
+    "static/js/453.ac9b7e2a.chunk.js": "/portfolio/static/js/453.ac9b7e2a.chunk.js",
     "static/media/about.png": "/portfolio/static/media/about.f53c982892a14349ae47.png",
-    "static/media/avatar.png": "/portfolio/static/media/avatar.f53c982892a14349ae47.png",
     "static/media/logo.png": "/portfolio/static/media/logo.8baf4cfd1eec0ee93e26.png",
     "static/media/climategpt.png": "/portfolio/static/media/climategpt.6aabc648f8cefc893f8e.png",
     "static/media/public-health.png": "/portfolio/static/media/public-health.04c560c9233594cf13ad.png",
@@ -34,12 +33,12 @@
     "static/media/Git.svg": "/portfolio/static/media/Git.9fbdd94cab5e68fd45b434fd29b1bb5e.svg",
     "static/media/MUI.svg": "/portfolio/static/media/MUI.4cc8e67288fab7f3ae7b7d8449ec35d7.svg",
     "static/media/Firebase.svg": "/portfolio/static/media/Firebase.de3da3a4068963dd30fc0f885f170428.svg",
-    "main.6fa4b811.css.map": "/portfolio/static/css/main.6fa4b811.css.map",
-    "main.8fad4042.js.map": "/portfolio/static/js/main.8fad4042.js.map",
-    "453.ace21015.chunk.js.map": "/portfolio/static/js/453.ace21015.chunk.js.map"
+    "main.04b93084.css.map": "/portfolio/static/css/main.04b93084.css.map",
+    "main.5bf5617c.js.map": "/portfolio/static/js/main.5bf5617c.js.map",
+    "453.ac9b7e2a.chunk.js.map": "/portfolio/static/js/453.ac9b7e2a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fa4b811.css",
-    "static/js/main.8fad4042.js"
+    "static/css/main.04b93084.css",
+    "static/js/main.5bf5617c.js"
   ]
 }
