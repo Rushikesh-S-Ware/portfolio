@@ -24,7 +24,7 @@ jobs:
       - name: Push to profile repo
         uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
         env:
-          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
+          API_TOKEN_GITHUB: ${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}
         with:
           source_file: 'profile_README.md'
           destination_repo: 'Rushikesh-S-Ware/Rushikesh-S-Ware'
