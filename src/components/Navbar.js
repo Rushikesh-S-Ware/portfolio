@@ -70,11 +70,11 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/project"
+                to="/career"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} />{" "}
-                Projects
+                Career
               </Nav.Link>
             </Nav.Item>
 
