@@ -65,3 +65,4 @@ I build practical data/ML solutions: clean pipelines, reliable analytics, and si
 ---
 
 _Thanks for stopping by! If my work aligns with your team’s needs, I’d love to chat._ ✉️
+
