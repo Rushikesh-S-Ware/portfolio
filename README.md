@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website - v1.0<br/>
-  <a href="https://rushikesh-s-ware.github.io](https://rushikesh-s-ware.github.io/portfolio/" target="_blank">rushikesh-s-ware.github.io</a>
+  <a href="https://rushikesh-s-ware.github.io/portfolio/" target="_blank">rushikesh-s-ware.github.io</a>
 </h2>
 
 <div align="center">
