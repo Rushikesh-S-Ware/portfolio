@@ -47,7 +47,6 @@ I build practical data/ML solutions: clean pipelines, reliable analytics, and si
 - **FIFA 22 Player EDA** – Feature engineering and interactive comparisons  
   *pandas, Plotly*
 
-> Links coming soon: demos and repos are being cleaned for public release.
 
 ---
 
@@ -59,9 +58,9 @@ I build practical data/ML solutions: clean pipelines, reliable analytics, and si
 ---
 
 ## Contact
-- **Website:** https://rushikesh-s-ware.github.io  
-- **Email:** _add your email here_  
-- **LinkedIn:** _add your LinkedIn here_
+- **Website:** https://rushikesh-s-ware.github.io/portfolio/ 
+- **Email:** rushikeshsware@gmail.com  
+- **LinkedIn:** www.linkedin.com/in/rushikesh-ware10
 
 ---
 
