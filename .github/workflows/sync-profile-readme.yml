@@ -15,24 +15,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout portfolio repo
-        uses: actions/checkout@v4
+     - name: Checkout portfolio repo
+       uses: actions/checkout@v4
+       with:
+          persist-credentials: true
 
-      # Optional: keep if you prefer copying; or just send README.md directly.
-      - name: Prepare README for profile repo
-        run: cp README.md profile_README.md
-
-      - name: Push to profile repo
-        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}   # <-- use the secret, not a literal token
-        with:
-          source_file: 'profile_README.md'            # or 'README.md' if you skip the copy step
-          destination_repo: 'Rushikesh-S-Ware/Rushikesh-S-Ware'  # must match your username repo
-          destination_folder: ''                      # root
-          destination_branch: 'main'
-          user_email: '41898282+github-actions[bot]@users.noreply.github.com'
-          user_name: 'github-actions[bot]'
-          commit_message: 'chore: sync profile README from portfolio'
-          overwrite: true
-          file_name: 'README.md'
+     - name: Push to profile repo
+       uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+       env:
+        API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}   # use the built-in token
+       with:
+        source_file: 'README.md'
+        destination_repo: 'Rushikesh-S-Ware/Rushikesh-S-Ware'
+        destination_folder: ''
+        destination_branch: 'main'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'chore: sync profile README from portfolio'
+        overwrite: true
+        file_name: 'README.md'
