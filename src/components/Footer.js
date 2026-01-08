@@ -12,7 +12,7 @@ function Footer() {
       <Row>
         {/* Left: Author info */}
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Rushikesh S. Ware</h3>
+          <h3>Designed and Developed by Yukta Batra</h3>
         </Col>
 
         {/* Center: Copyright */}
