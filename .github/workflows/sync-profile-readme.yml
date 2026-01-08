@@ -1,0 +1,36 @@
+name: Sync Profile README
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - README.md             # triggers when README.md changes
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout portfolio repo
+       uses: actions/checkout@v4
+       with:
+          persist-credentials: true
+
+     - name: Push to profile repo
+       uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
+       env:
+        API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}   # use the built-in token
+       with:
+        source_file: 'README.md'
+        destination_repo: 'Rushikesh-S-Ware/Rushikesh-S-Ware'
+        destination_folder: ''
+        destination_branch: 'main'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'chore: sync profile README from portfolio'
+        overwrite: true
+        file_name: 'README.md'
