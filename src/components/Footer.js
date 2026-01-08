@@ -17,7 +17,7 @@ function Footer() {
 
         {/* Center: Copyright */}
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} RW</h3>
+          <h3>Copyright © {year} YB</h3>
         </Col>
 
         {/* Right: Social Links */}
