@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Rushikesh S. Ware - Data / Database Analyst specializing in ETL pipelines, SQL, data modeling, and analytics. GMU MS Data Analytics Engineering." />
+<meta name="author" content="Rushikesh S. Ware" />
+<title>Rushikesh S. Ware - Data Analyst & Engineer</title>
+<link rel="icon" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+:root{--bg-0:#06070d;--bg-1:#0b0d17;--bg-2:#111426;--card:rgba(20,23,44,.55);--card-border:rgba(139,120,255,.18);--text:#e7e9f3;--text-dim:#9aa0b4;--muted:#6b7186;--accent:#8b78ff;--accent-2:#4cc9f0;--accent-3:#f72585;--good:#22c55e;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg-0);color:var(--text);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse 800px 400px at 15% 0%,rgba(139,120,255,.18),transparent 50%),radial-gradient(ellipse 600px 500px at 85% 30%,rgba(76,201,240,.12),transparent 50%),radial-gradient(ellipse 700px 400px at 50% 100%,rgba(247,37,133,.08),transparent 50%);z-index:-2;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(139,120,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(139,120,255,.03) 1px,transparent 1px);background-size:60px 60px;z-index:-1;pointer-events:none;mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%)}
+a{color:var(--accent-2);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,7,13,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(139,120,255,.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:17px;letter-spacing:-.01em;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{color:var(--text-dim);font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:8px 18px;border:1px solid var(--accent);border-radius:999px;color:var(--accent)!important;font-weight:600}
+.nav-cta:hover{background:var(--accent);color:#fff!important}
+.nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 32px 80px;max-width:1200px;margin:0 auto}
+.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:rgba(139,120,255,.1);border:1px solid rgba(139,120,255,.2);border-radius:999px;font-size:13px;color:var(--accent);font-weight:500;margin-bottom:24px}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--good);box-shadow:0 0 10px var(--good);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:20px}
+.hero h1 .grad{background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 50%,var(--accent-3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .role-line{font-size:clamp(1.1rem,1.5vw,1.35rem);color:var(--text-dim);margin-bottom:24px;font-weight:500;min-height:2em}
+.role-line .typed{color:var(--accent-2);font-weight:600}
+.role-line .caret{display:inline-block;width:2px;background:var(--accent-2);margin-left:2px;animation:blink 1s infinite}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+.hero p.lead{color:var(--text-dim);font-size:1.05rem;max-width:540px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 24px;border-radius:10px;font-weight:600;font-size:14px;cursor:pointer;border:0;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#6e5ddb);color:#fff;box-shadow:0 8px 28px rgba(139,120,255,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(139,120,255,.45);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid rgba(255,255,255,.1)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(139,120,255,.4);color:var(--text)}
+
+/* Hero visual */
+.hero-visual{position:relative;width:100%;max-width:480px;aspect-ratio:1;margin-left:auto;justify-self:end}
+.hero-visual .orb{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,var(--accent) 0%,var(--accent-2) 33%,var(--accent-3) 66%,var(--accent) 100%);filter:blur(80px);opacity:.35;animation:rotate 20s linear infinite}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.hero-visual .code-card{position:absolute;inset:10%;background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:20px;padding:22px 24px;font-family:"JetBrains Mono",monospace;font-size:12.5px;display:flex;flex-direction:column;line-height:1.7;overflow:hidden}
+.code-card .tk-key{color:var(--accent)}
+.code-card .tk-str{color:var(--good)}
+.code-card .tk-com{color:var(--muted)}
+.code-card .tk-fn{color:var(--accent-2)}
+.code-card .tk-num{color:var(--accent-3)}
+.code-card .tk-op{color:#ff9ed1}
+.code-head{display:flex;align-items:center;gap:10px;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06);flex-shrink:0}
+.code-dots{display:inline-flex;gap:6px}
+.code-dots span{width:10px;height:10px;border-radius:50%}
+.code-dots span:nth-child(1){background:#ff5f57}
+.code-dots span:nth-child(2){background:#febc2e}
+.code-dots span:nth-child(3){background:#28c840}
+.code-lang{font-size:11px;color:var(--accent);font-weight:600;margin-left:auto;font-family:"JetBrains Mono",monospace;letter-spacing:.05em;padding:3px 9px;border:1px solid rgba(139,120,255,.3);border-radius:6px;background:rgba(139,120,255,.08);transition:all .4s ease}
+.code-body{position:relative;flex:1}
+.code-slide{position:absolute;inset:0;opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
+.code-slide.active{opacity:1;transform:translateY(0)}
+.code-slide>div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Stats */
+.stats{max-width:1200px;margin:0 auto;padding:20px 32px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{padding:20px 22px;background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:14px}
+.stat .n{font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat .l{color:var(--text-dim);font-size:.88rem;margin-top:4px}
+
+/* Sections */
+section.sec{max-width:1200px;margin:0 auto;padding:80px 32px}
+.sec-head{margin-bottom:50px}
+.sec-kicker{font-size:13px;color:var(--accent);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.sec-title{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.sec-sub{color:var(--text-dim);max-width:640px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.about-text p{color:var(--text-dim);margin-bottom:16px}
+.about-text p strong{color:var(--text);font-weight:600}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hl{padding:18px;background:var(--card);border:1px solid var(--card-border);border-radius:12px}
+.hl .t{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:6px}
+.hl .v{font-size:14px;color:var(--text)}
+
+/* Timeline */
+.tl{display:grid;gap:24px}
+.tl-card{padding:28px;background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:16px;transition:transform .3s,border-color .3s}
+.tl-card:hover{transform:translateY(-3px);border-color:rgba(139,120,255,.35)}
+.tl-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.tl-role{font-size:1.15rem;font-weight:600}
+.tl-company{color:var(--accent-2);font-weight:500}
+.tl-meta{color:var(--muted);font-size:.88rem;font-family:"JetBrains Mono",monospace;white-space:nowrap}
+.tl-card ul{list-style:none;margin-top:10px}
+.tl-card ul li{color:var(--text-dim);padding-left:22px;position:relative;margin-bottom:8px;font-size:.95rem}
+.tl-card ul li::before{content:"▹";position:absolute;left:0;color:var(--accent)}
+.tl-card ul li strong{color:var(--text);font-weight:600}
+
+/* Projects */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.pcard{background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+.pcard:hover{transform:translateY(-6px);border-color:rgba(139,120,255,.45);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.pcard-img{aspect-ratio:16/9;overflow:hidden;position:relative;background:#0a0b16}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .pcard-img img{transform:scale(1.04)}
+.pcard-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,7,13,.6) 100%);pointer-events:none}
+.pcard-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.pcard-title{font-size:1.1rem;font-weight:600;margin-bottom:10px}
+.pcard-desc{color:var(--text-dim);font-size:.92rem;margin-bottom:14px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.tag{font-size:11px;font-family:"JetBrains Mono",monospace;color:var(--accent);background:rgba(139,120,255,.1);border:1px solid rgba(139,120,255,.22);padding:4px 8px;border-radius:6px}
+.pcard-links{display:flex;gap:10px;margin-top:auto}
+.plink{padding:8px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:var(--text);font-size:13px;font-weight:500;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.plink:hover{background:rgba(139,120,255,.15);border-color:var(--accent);color:var(--text)}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.skill-group{padding:24px;background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:14px}
+.skill-group .t{font-size:.95rem;color:var(--accent);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.skill-group .t::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-size:13px;padding:6px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:999px;color:var(--text);transition:all .2s}
+.pill:hover{background:rgba(139,120,255,.12);border-color:var(--accent);color:var(--accent)}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.edu-card{padding:28px;background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--card-border);border-radius:16px;display:flex;gap:20px}
+.edu-logo{width:64px;height:64px;border-radius:12px;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.edu-logo img{width:100%;height:100%;object-fit:contain;padding:8px}
+.edu-body{flex:1}
+.edu-school{font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.edu-deg{color:var(--text-dim);font-size:.92rem;margin-bottom:10px}
+.edu-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);font-family:"JetBrains Mono",monospace}
+.edu-gpa{color:var(--good)!important;font-weight:600}
+
+/* Contact */
+.contact-card{text-align:center;padding:60px 32px;background:radial-gradient(ellipse at center,rgba(139,120,255,.12) 0%,transparent 70%),var(--card);border:1px solid var(--card-border);border-radius:20px}
+.contact-card h2{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;margin-bottom:12px;letter-spacing:-.02em}
+.contact-card p{color:var(--text-dim);max-width:540px;margin:0 auto 28px}
+.contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* Footer */
+footer{max-width:1200px;margin:0 auto;padding:30px 32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.05)}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--accent)}
+
+/* Responsive */
+@media (max-width:900px){
+.hero-content{grid-template-columns:1fr;text-align:left}
+.hero-visual{display:none}
+.about-grid{grid-template-columns:1fr}
+.edu-grid{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-1);flex-direction:column;padding:20px;gap:18px;border-top:1px solid rgba(255,255,255,.05)}
+.nav-links.open{display:flex}
+.nav-toggle{display:block}
+.hero,section.sec{padding-left:20px;padding-right:20px}
+.hero{padding-top:100px}
+.stats{padding:10px 20px 30px}
+.about-highlights{grid-template-columns:1fr}
+.nav-inner{padding:14px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="#top" class="nav-brand">rushikesh.ware</a>
+<button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="Rushikesh_S_Ware_Resume.pdf" target="_blank" class="nav-cta">Resume</a></li>
+</ul>
+</div>
+</nav>
+
+<header id="top" class="hero">
+<div class="hero-content">
+<div>
+<div class="hero-eyebrow"><span class="status-dot"></span>Open to full-time opportunities · Fairfax, VA</div>
+<h1>Turning messy data<br>into <span class="grad">decisions that ship.</span></h1>
+<div class="role-line">I build <span class="typed" id="typed"></span><span class="caret">&nbsp;</span></div>
+<p class="lead">Data &amp; Database Analyst with 2+ years building production ETL pipelines, enforcing data quality, and modeling relational and analytical schemas. MS in Data Analytics Engineering from George Mason University (GPA 3.90).</p>
+<div class="hero-ctas">
+<a href="Rushikesh_S_Ware_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume ↓</a>
+<a href="#projects" class="btn btn-ghost">See Projects →</a>
+</div>
+</div>
+<div class="hero-visual" aria-hidden="true">
+<div class="orb"></div>
+<div class="code-card">
+<div class="code-head">
+<span class="code-dots"><span></span><span></span><span></span></span>
+<span class="code-lang" id="codeLang">python</span>
+</div>
+<div class="code-body">
+
+<div class="code-slide active" data-lang="python">
+<div><span class="tk-com"># source_to_target.py</span></div>
+<div><span class="tk-key">from</span> etl <span class="tk-key">import</span> Pipeline</div>
+<div>&nbsp;</div>
+<div>pipe <span class="tk-op">=</span> <span class="tk-fn">Pipeline</span>(</div>
+<div>&nbsp;&nbsp;source<span class="tk-op">=</span><span class="tk-str">"bigquery"</span>,</div>
+<div>&nbsp;&nbsp;target<span class="tk-op">=</span><span class="tk-str">"postgres"</span>,</div>
+<div>&nbsp;&nbsp;checks<span class="tk-op">=</span>[<span class="tk-str">"schema"</span>, <span class="tk-str">"range"</span>, <span class="tk-str">"nulls"</span>]</div>
+<div>)</div>
+<div>pipe.<span class="tk-fn">run</span>()&nbsp;&nbsp;<span class="tk-com"># 500K+ rows</span></div>
+<div>&nbsp;</div>
+<div><span class="tk-com"># ✓ latency -70%</span></div>
+</div>
+
+<div class="code-slide" data-lang="sql">
+<div><span class="tk-com">-- fact_emissions.sql</span></div>
+<div><span class="tk-key">WITH</span> yoy <span class="tk-key">AS</span> (</div>
+<div>&nbsp;&nbsp;<span class="tk-key">SELECT</span> country_code,</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tk-fn">SUM</span>(co2_kt) <span class="tk-key">AS</span> total,</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tk-fn">LAG</span>(<span class="tk-fn">SUM</span>(co2_kt)) <span class="tk-key">OVER</span> (...)</div>
+<div>&nbsp;&nbsp;<span class="tk-key">FROM</span> fact_emissions</div>
+<div>&nbsp;&nbsp;<span class="tk-key">GROUP BY</span> country_code, <span class="tk-fn">YEAR</span>(date)</div>
+<div>)</div>
+<div><span class="tk-key">SELECT</span> <span class="tk-op">*</span> <span class="tk-key">FROM</span> yoy</div>
+<div><span class="tk-key">WHERE</span> total <span class="tk-op">&gt;</span> <span class="tk-num">1000</span>;</div>
+</div>
+
+<div class="code-slide" data-lang="bash">
+<div><span class="tk-com"># validate pipeline</span></div>
+<div><span class="tk-op">$</span> airflow dags trigger climate_etl</div>
+<div><span class="tk-op">$</span> great_expectations checkpoint run \</div>
+<div>&nbsp;&nbsp;--checkpoint <span class="tk-str">"post_load"</span></div>
+<div>&nbsp;</div>
+<div><span class="tk-com">▹ schema     ✓ pass</span></div>
+<div><span class="tk-com">▹ ranges     ✓ pass</span></div>
+<div><span class="tk-com">▹ nulls      ✓ pass</span></div>
+<div><span class="tk-com">▹ uniqueness ✓ pass</span></div>
+<div>&nbsp;</div>
+<div><span class="tk-fn">4/4 checks passed</span></div>
+</div>
+
+<div class="code-slide" data-lang="python · ml">
+<div><span class="tk-com"># kev_predict.py</span></div>
+<div><span class="tk-key">from</span> xgboost <span class="tk-key">import</span> XGBClassifier</div>
+<div><span class="tk-key">from</span> imblearn.over_sampling <span class="tk-key">import</span> SMOTE</div>
+<div>&nbsp;</div>
+<div>X_bal, y_bal <span class="tk-op">=</span> <span class="tk-fn">SMOTE</span>().<span class="tk-fn">fit_resample</span>(X, y)</div>
+<div>model <span class="tk-op">=</span> <span class="tk-fn">XGBClassifier</span>(n_estimators<span class="tk-op">=</span><span class="tk-num">500</span>)</div>
+<div>model.<span class="tk-fn">fit</span>(X_bal, y_bal)</div>
+<div>&nbsp;</div>
+<div><span class="tk-com"># ROC-AUC = 0.996</span></div>
+</div>
+
+<div class="code-slide" data-lang="docker">
+<div><span class="tk-com"># Dockerfile</span></div>
+<div><span class="tk-key">FROM</span> <span class="tk-str">python:3.11-slim</span></div>
+<div><span class="tk-key">WORKDIR</span> /app</div>
+<div><span class="tk-key">COPY</span> requirements.txt .</div>
+<div><span class="tk-key">RUN</span> pip install <span class="tk-op">-r</span> requirements.txt</div>
+<div><span class="tk-key">COPY</span> . .</div>
+<div><span class="tk-key">CMD</span> [<span class="tk-str">"airflow"</span>, <span class="tk-str">"scheduler"</span>]</div>
+<div>&nbsp;</div>
+<div><span class="tk-com"># → reproducible builds</span></div>
+<div><span class="tk-com"># → CI/CD via GH Actions</span></div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="stats">
+<div class="stat"><div class="n">2+</div><div class="l">Years in industry</div></div>
+<div class="stat"><div class="n">500K+</div><div class="l">Records pipelined</div></div>
+<div class="stat"><div class="n">3.90</div><div class="l">GMU MS GPA</div></div>
+<div class="stat"><div class="n">5</div><div class="l">Shipped projects</div></div>
+</div>
+
+<section id="about" class="sec">
+<div class="sec-head">
+<div class="sec-kicker">01 · About</div>
+<h2 class="sec-title">Who I am</h2>
+<p class="sec-sub">Data work that actually holds up in production, not just in slides.</p>
+</div>
+<div class="about-grid">
+<div class="about-text">
+<p>I'm <strong>Rushikesh</strong>, a data / database analyst based in Fairfax, VA. I spent my first two years at <strong>Cognizant Technology Solutions</strong> writing SQL, stored procedures, and ETL workflows in BigQuery on GCP — the kind of work where a broken pipeline at 2 a.m. is your problem to find and fix.</p>
+<p>At <strong>George Mason University</strong> I finished my MS in Data Analytics Engineering in December 2025 (GPA 3.90). My graduate work focused on <strong>source-to-target mapping, data quality enforcement</strong>, and <strong>relational data modeling</strong> across heterogeneous sources — climate APIs, cybersecurity feeds, public health records.</p>
+<p>I care about the boring parts: schema validation, metadata docs, null handling, referential integrity. That's where reliability comes from. I work equally well on the analysis side — SQL, Python, Tableau, Power BI — when the question is "what does this data mean?" instead of "how do we move it?"</p>
+<p>Currently <strong>open to full-time roles</strong> in data analytics, data engineering, or analytics engineering in the US.</p>
+</div>
+<div class="about-highlights">
+<div class="hl"><div class="t">Location</div><div class="v">Fairfax, VA · Open to relocation</div></div>
+<div class="hl"><div class="t">Work Authorization</div><div class="v">US · No sponsorship needed</div></div>
+<div class="hl"><div class="t">Best at</div><div class="v">SQL · ETL · Data quality · Modeling</div></div>
+<div class="hl"><div class="t">Also comfortable with</div><div class="v">Python · GCP/AWS · Tableau · Airflow</div></div>
+</div>
+</div>
+</section>
+
+<section id="experience" class="sec">
+<div class="sec-head">
+<div class="sec-kicker">02 · Experience</div>
+<h2 class="sec-title">Where I've worked</h2>
+</div>
+<div class="tl">
+<article class="tl-card">
+<div class="tl-head">
+<div>
+<div class="tl-role">Programmer Analyst / Data Analyst</div>
+<div class="tl-company">Cognizant Technology Solutions · Pune, India</div>
+</div>
+<div class="tl-meta">Feb 2022 – Nov 2023</div>
+</div>
+<ul>
+<li>Designed and optimized <strong>SQL queries, stored procedures, and ETL workflows</strong> in BigQuery on GCP, improving data delivery time by <strong>25%</strong> and cutting compute cost by <strong>18%</strong>.</li>
+<li>Performed <strong>data profiling, source-to-target data mapping</strong>, and pre/post-load data quality checks across reporting pipelines.</li>
+<li>Implemented data validation rules — constraint enforcement, null handling, referential integrity — to keep reporting datasets clean across systems.</li>
+<li>Automated deployment and testing with <strong>Docker, Airflow, and GitHub Actions CI/CD</strong>, reducing deployment errors by <strong>20%</strong>.</li>
+<li>Documented data definitions, transformation logic, and metadata standards for governance and team knowledge sharing.</li>
+</ul>
+</article>
+
+<article class="tl-card">
+<div class="tl-head">
+<div>
+<div class="tl-role">Data Engineer — Climate Data Integration Platform</div>
+<div class="tl-company">Academic + Deployed · Fairfax, VA</div>
+</div>
+<div class="tl-meta">Aug 2025 – Dec 2025</div>
+</div>
+<ul>
+<li>Profiled and mapped multi-source datasets (APIs, relational databases, CSVs) into a unified <strong>relational schema</strong> supporting <strong>500K+ records across 165 countries</strong>.</li>
+<li>Built <strong>fact and dimension data models</strong> reducing query latency by <strong>70%</strong>.</li>
+<li>Enforced data quality across 4 validation dimensions — schema match, value ranges, unit consistency, null handling — improving pipeline reliability by <strong>85%</strong>.</li>
+<li>Authored data dictionaries, pipeline docs, and data flow diagrams to support governance and maintainability.</li>
+<li>Containerized pipelines with <strong>Docker</strong> and deployed via <strong>CI/CD with GitHub Actions</strong> for reproducible runs.</li>
+</ul>
+</article>
+</div>
+</section>
+
+<section id="projects" class="sec">
+<div class="sec-head">
+<div class="sec-kicker">03 · Projects</div>
+<h2 class="sec-title">Selected work</h2>
+<p class="sec-sub">Each of these is either deployed live or has a public repo. Code, demos, and metrics linked below.</p>
+</div>
+<div class="proj-grid">
+
+<article class="pcard">
+<div class="pcard-img"><img src="images/nlp-sql.png" alt="NLP to SQL Transformer" /></div>
+<div class="pcard-body">
+<div class="pcard-title">NLP-SQL Transformer</div>
+<p class="pcard-desc">Transformer-based NLP model (BART fine-tune) that converts natural-language questions into valid SQL over multiple uploaded CSVs. Reached <strong>45.6% exact-match accuracy</strong> on the Spider benchmark. Deployed as a live Streamlit app on Hugging Face Spaces.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">BART</span><span class="tag">PyTorch</span><span class="tag">Streamlit</span><span class="tag">HuggingFace</span></div>
+<div class="pcard-links">
+<a class="plink" href="https://github.com/Rushikesh-S-Ware/NLP---SQL-Transformer-.git" target="_blank" rel="noopener">Code</a>
+<a class="plink" href="https://huggingface.co/spaces/Rushikesh-S-Ware/NLP-SQL-Transformer" target="_blank" rel="noopener">Live demo ↗</a>
+</div>
+</div>
+</article>
+
+<article class="pcard">
+<div class="pcard-img"><img src="images/climategpt.png" alt="Forest Analytics / ClimateGPT" /></div>
+<div class="pcard-body">
+<div class="pcard-title">Forest Analytics · ClimateGPT</div>
+<p class="pcard-desc">Data pipeline over <strong>500K+ environmental records</strong> integrated with the ClimateGPT API for automated climate insights. Star-schema data models on forest loss, CO₂ emissions, and land cover; query latency down <strong>70%</strong>. 165-country coverage.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">ClimateGPT</span></div>
+<div class="pcard-links">
+<a class="plink" href="https://github.com/Rushikesh-S-Ware" target="_blank" rel="noopener">Code</a>
+</div>
+</div>
+</article>
+
+<article class="pcard">
+<div class="pcard-img"><img src="images/kev-vulnerability.png" alt="KEV Vulnerability Prediction" /></div>
+<div class="pcard-body">
+<div class="pcard-title">KEV Vulnerability Prediction</div>
+<p class="pcard-desc">XGBoost model predicting which CVEs will become Known Exploited Vulnerabilities. Ingested CVE / CVSS / EPSS / CPE feeds into a normalized schema, handled class imbalance with SMOTE + PCA + threshold calibration, reached <strong>AUC 0.996</strong>. Served via REST API.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">PostgreSQL</span><span class="tag">REST API</span><span class="tag">SMOTE</span></div>
+<div class="pcard-links">
+<a class="plink" href="https://github.com/Rushikesh-S-Ware" target="_blank" rel="noopener">Code</a>
+</div>
+</div>
+</article>
+
+<article class="pcard">
+<div class="pcard-img"><img src="images/public-health.png" alt="Public Health Analytics" /></div>
+<div class="pcard-body">
+<div class="pcard-title">Public Health Analytics — Drug Overdose</div>
+<p class="pcard-desc">Profiled and cleaned <strong>20 years</strong> of overdose records using AWS Glue DataBrew; mapped multiple source schemas into a unified analytical model. SQL analytics + Tableau dashboards surfacing demographic risk (notably fentanyl's disproportionate impact on ages 25–34).</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">AWS Glue</span><span class="tag">PostgreSQL</span><span class="tag">Tableau</span></div>
+<div class="pcard-links">
+<a class="plink" href="https://github.com/Rushikesh-S-Ware/Public-Health-Analytics-Drug-overdose.git" target="_blank" rel="noopener">Code</a>
+</div>
+</div>
+</article>
+
+<article class="pcard">
+<div class="pcard-img"><img src="images/fifa22.png" alt="FIFA 22 Player Analysis" /></div>
+<div class="pcard-body">
+<div class="pcard-title">FIFA 22 Player Performance Analysis</div>
+<p class="pcard-desc">Statistical + ML analysis of FIFA 22 player data across top football leagues. Interactive dashboard for player ratings, positional performance, and league comparisons. Increased stakeholder insight accessibility by <strong>20%</strong>.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">Pandas</span><span class="tag">Data Viz</span></div>
+<div class="pcard-links">
+<a class="plink" href="https://github.com/Rushikesh-S-Ware/Fifa_22" target="_blank" rel="noopener">Code</a>
+<a class="plink" href="https://rushikesh-s-ware.github.io/Fifa_22/title.html" target="_blank" rel="noopener">Live demo ↗</a>
+</div>
+</div>
+</article>
+
+<article class="pcard">
+<div class="pcard-img"><img src="images/bridge.png" alt="Infrastructure Analytics" /></div>
+<div class="pcard-body">
+<div class="pcard-title">Infrastructure Analytics &amp; Optimization</div>
+<p class="pcard-desc">Condition modeling on <strong>7,500+ structural assets</strong> using XGBoost and Random Forest. Applied Chi-Square, ANOVA, and NPV analysis to surface relationships that inform maintenance investment decisions. R² = 0.45 on forecasted ratings.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">ANOVA</span><span class="tag">SQL</span></div>
+<div class="pcard-links">
+<a class="plink" href="https://github.com/Rushikesh-S-Ware" target="_blank" rel="noopener">Code</a>
+</div>
+</div>
+</article>
+
+</div>
+</section>
+
+<section id="skills" class="sec">
+<div class="sec-head">
+<div class="sec-kicker">04 · Skills</div>
+<h2 class="sec-title">Tooling</h2>
+<p class="sec-sub">What I reach for first — grouped by where it fits in the stack.</p>
+</div>
+<div class="skills-grid">
+<div class="skill-group"><div class="t">Databases &amp; SQL</div><div class="pills"><span class="pill">PostgreSQL</span><span class="pill">MySQL</span><span class="pill">BigQuery</span><span class="pill">Stored Procedures</span><span class="pill">Triggers</span><span class="pill">Star Schema</span><span class="pill">Normalized Modeling</span></div></div>
+<div class="skill-group"><div class="t">Data Engineering &amp; ETL</div><div class="pills"><span class="pill">Data Profiling</span><span class="pill">Source-to-Target Mapping</span><span class="pill">Data Quality Rules</span><span class="pill">Metadata Mgmt</span><span class="pill">Airflow</span><span class="pill">Spark</span></div></div>
+<div class="skill-group"><div class="t">Programming</div><div class="pills"><span class="pill">Python</span><span class="pill">Bash / Shell</span><span class="pill">R</span><span class="pill">Java</span><span class="pill">UNIX / Linux</span></div></div>
+<div class="skill-group"><div class="t">Cloud &amp; Platforms</div><div class="pills"><span class="pill">GCP · BigQuery</span><span class="pill">AWS · S3 / EC2 / Glue</span><span class="pill">Databricks</span><span class="pill">Snowflake</span></div></div>
+<div class="skill-group"><div class="t">DevOps &amp; Automation</div><div class="pills"><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">GitHub Actions</span><span class="pill">Git</span><span class="pill">Terraform</span></div></div>
+<div class="skill-group"><div class="t">Visualization &amp; BI</div><div class="pills"><span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">Streamlit</span></div></div>
+<div class="skill-group"><div class="t">ML &amp; Analytics</div><div class="pills"><span class="pill">XGBoost</span><span class="pill">Random Forest</span><span class="pill">PCA / SMOTE</span><span class="pill">NLP (BART)</span><span class="pill">ANOVA / Chi-Square</span></div></div>
+<div class="skill-group"><div class="t">Governance &amp; Docs</div><div class="pills"><span class="pill">Data Dictionaries</span><span class="pill">Data Flow Diagrams</span><span class="pill">Runbooks</span><span class="pill">Agile</span></div></div>
+</div>
+</section>
+
+<section id="education" class="sec">
+<div class="sec-head">
+<div class="sec-kicker">05 · Education</div>
+<h2 class="sec-title">Training</h2>
+</div>
+<div class="edu-grid">
+<div class="edu-card">
+<div class="edu-logo"><img src="images/gmu.png" alt="George Mason University" /></div>
+<div class="edu-body">
+<div class="edu-school">George Mason University</div>
+<div class="edu-deg">M.S. Data Analytics Engineering</div>
+<div class="edu-meta"><span>Fairfax, VA</span><span>Dec 2025</span><span class="edu-gpa">GPA 3.90</span></div>
+<p style="margin-top:14px;color:var(--text-dim);font-size:.88rem;">Coursework: Big Data, Machine Learning, Predictive Analytics, NLP with Deep Learning, Data Engineering, Database Design.</p>
+</div>
+</div>
+<div class="edu-card">
+<div class="edu-logo"><img src="images/sppu.png" alt="Savitribai Phule Pune University" /></div>
+<div class="edu-body">
+<div class="edu-school">Savitribai Phule Pune University</div>
+<div class="edu-deg">B.E. Mechanical Engineering</div>
+<div class="edu-meta"><span>Pune, India</span><span>May 2021</span><span class="edu-gpa">GPA 3.52</span></div>
+<p style="margin-top:14px;color:var(--text-dim);font-size:.88rem;">Undergraduate research: Hybrid CFRP/GFRP composite analysis under thermal and bending loads using MATLAB, ANSYS, and SolidWorks.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="sec">
+<div class="contact-card">
+<h2>Let's talk.</h2>
+<p>Open to full-time data analyst, data engineer, and analytics engineer roles. Fastest reply is email.</p>
+<div class="contact-links">
+<a href="mailto:rushikeshsware@gmail.com" class="btn btn-primary">✉ rushikeshsware@gmail.com</a>
+<a href="https://linkedin.com/in/rushikesh-ware10" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+<a href="https://github.com/Rushikesh-S-Ware" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div>© <span id="yr"></span> Rushikesh S. Ware · Fairfax, VA</div>
+<div>Built with plain HTML &amp; CSS · <a href="Rushikesh_S_Ware_Resume.pdf" target="_blank">Resume</a> · <a href="mailto:rushikeshsware@gmail.com">Email</a></div>
+</footer>
+
+<script>
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+const tog=document.getElementById("navToggle"),links=document.getElementById("navLinks");
+tog.addEventListener("click",()=>links.classList.toggle("open"));
+links.addEventListener("click",e=>{if(e.target.tagName==="A")links.classList.remove("open")});
+
+// Code slide cycler
+(function(){
+  const slides=document.querySelectorAll(".code-slide"),langLabel=document.getElementById("codeLang");
+  if(!slides.length||!langLabel)return;
+  let idx=0;
+  function cycle(){
+    slides[idx].classList.remove("active");
+    idx=(idx+1)%slides.length;
+    slides[idx].classList.add("active");
+    langLabel.textContent=slides[idx].dataset.lang||"code";
+  }
+  setInterval(cycle,4500);
+})();
+
+// Role typewriter
+const roles=["ETL pipelines that don't break","data models that make sense","dashboards people actually use","SQL that runs fast","quality checks, not just queries"];
+const target=document.getElementById("typed");
+let ri=0,ci=0,del=false;
+function tick(){
+  const cur=roles[ri];
+  target.textContent=cur.slice(0,ci);
+  if(!del){
+    if(ci<cur.length){ci++;setTimeout(tick,60+Math.random()*40);}
+    else{del=true;setTimeout(tick,1800);}
+  }else{
+    if(ci>0){ci--;setTimeout(tick,25);}
+    else{del=false;ri=(ri+1)%roles.length;setTimeout(tick,300);}
+  }
+}
+tick();
+
+// Fade in
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity=1;e.target.style.transform="translateY(0)";}});
+},{threshold:0.1});
+document.querySelectorAll(".tl-card, .pcard, .skill-group, .edu-card, .stat, .hl").forEach(el=>{
+  el.style.opacity=0;el.style.transform="translateY(20px)";el.style.transition="opacity .6s ease, transform .6s ease";io.observe(el);
+});
+</script>
+</body>
+</html>
